@@ -23,10 +23,11 @@ Source1:	http://software.linspire.com/pool-src/los/los-clear-e-icons/los-clear-e
 NoSource:	1
 %endif
 BuildRequires:	autoconf
-BuildRequires:	unsermake
 BuildRequires:	automake
-BuildRequires:	kdelibs-devel >= 9:3.2.0
 BuildRequires:	kdebase-desktop-libs >= 9:3.2.0
+BuildRequires:	kdelibs-devel >= 9:3.2.0
+BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	unsermake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -100,8 +101,8 @@ TODO
 %endif
 
 %build
-cp -f %{_datadir}/automake/config.sub admin
-export UNSERMAKE=%{_datadir}/unsermake/unsermake
+cp -f /usr/share/automake/config.sub admin
+export UNSERMAKE=/usr/share/unsermake/unsermake
 %{__make} -f Makefile.cvs
 
 %configure \
