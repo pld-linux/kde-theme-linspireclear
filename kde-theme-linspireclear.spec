@@ -12,7 +12,7 @@ Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	%{_common_ver}
-Release:	1
+Release:	0.1
 License:	LGPL/GPL/Proprietary
 Group:		Themes
 Source0:	http://software.linspire.com/pool-src/los/los-linspireclear-style/los-%{_name}-style_%{_style_ver}-%{_common_ver}.linspire0.1.tar.gz
