@@ -7,7 +7,7 @@
 
 %define		_common_ver	0.0.0.50
 %define		_style_ver	1.11
-%define		_icons_ver	1.6
+%define		_icons_ver	1.7
 Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
@@ -18,10 +18,11 @@ Group:		Themes
 Source0:	http://software.linspire.com/pool-src/los/los-linspireclear-style/los-%{_name}-style_%{_style_ver}-%{_common_ver}.linspire0.1.tar.gz
 # Source0-md5:	1e2cc6f0febf17b294d8306ccce8db51
 Source1:	http://software.linspire.com/pool-src/los/los-clear-e-icons/los-clear-e-icons_%{_icons_ver}-%{_common_ver}.linspire0.1.tar.gz
-# NoSource1-md5:	c934cff4337eefe12981aefc1a7a3c41
+# NoSource1-md5:	14d2ea49f2ebb47eb9690d69fcc6c7f2
 %if %{without weHaveCheckedIfTheIconsAreDistributable}
 NoSource:	1
 %endif
+Patch0:		kde-common-PLD.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	kdebase-desktop-libs >= 9:3.2.0
@@ -99,6 +100,7 @@ TODO
 %else
 %setup -q -n marlin_build_los-%{_name}-style-1
 %endif
+%patch0 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
