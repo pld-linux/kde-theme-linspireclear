@@ -12,7 +12,7 @@ Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	%{_common_ver}
-Release:	0.1
+Release:	0.2
 License:	LGPL/GPL/Proprietary
 Group:		Themes
 Source0:	http://software.linspire.com/pool-src/los/los-linspireclear-style/los-%{_name}-style_%{_style_ver}-%{_common_ver}.linspire0.1.tar.gz
@@ -22,11 +22,11 @@ Source1:	http://software.linspire.com/pool-src/los/los-clear-e-icons/los-clear-e
 %if %{without weHaveCheckedIfTheIconsAreDistributable}
 NoSource:	1
 %endif
-Patch0:		kde-common-PLD.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	kdebase-desktop-libs >= 9:3.2.0
 BuildRequires:	kdelibs-devel >= 9:3.2.0
+BuildRequires:	perl-base
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	unsermake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -100,11 +100,11 @@ TODO
 %else
 %setup -q -n marlin_build_los-%{_name}-style-1
 %endif
-%patch0 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
 export UNSERMAKE=/usr/share/unsermake/unsermake
+%{__perl} -pi -e 's/(automake\*1\.6\.\* \| automake\*1\.7\*)/automake*1.[6-9]*/' admin/cvs.sh
 %{__make} -f Makefile.cvs
 
 %configure \
