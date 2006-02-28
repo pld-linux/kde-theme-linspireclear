@@ -54,8 +54,8 @@ TODO
 %package -n kde-colorscheme-%{_name}
 Summary:	Color scheme for KDE style - %{_name}
 Summary(pl):	Schemat kolorów do stylu KDE - %{_name}
-Version:        %{_style_ver}
-License:        LGPL
+Version:	%{_style_ver}
+License:	LGPL
 Group:		Themes
 Requires:	kdebase-core
 
@@ -80,12 +80,12 @@ TODO
 TODO
 
 %package -n kde-icons-%{_name}
-Summary:        KDE icons - %{_name}
-Summary(pl):    Motyw ikon KDE - %{_name}
-Version:        %{_icons_ver}
-Group:          Themes
-License:       	Proprietary (See copyright)
-Requires:       kdelibs
+Summary:	KDE icons - %{_name}
+Summary(pl):	Motyw ikon KDE - %{_name}
+Version:	%{_icons_ver}
+License:	Proprietary (See copyright)
+Group:		Themes
+Requires:	kdelibs
 
 %description -n kde-icons-%{_name}
 TODO
