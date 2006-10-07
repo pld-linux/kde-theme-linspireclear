@@ -1,8 +1,9 @@
 # TODO: Check if the icons are distributable
 #	Write usable descriptions
-
+#
+# Conditional build:
 %bcond_with	weHaveCheckedIfTheIconsAreDistributable
-
+#
 %define		_name	linspireclear
 
 %define		_common_ver	0.0.0.50
@@ -32,10 +33,10 @@ BuildRequires:	unsermake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-TODO
+KDE theme - %{_name}.
 
 %description -l pl
-TODO
+Motyw KDE - %{_name}.
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
@@ -46,10 +47,10 @@ Group:		Themes
 Requires:	kdelibs
 
 %description -n kde-style-%{_name}
-TODO
+KDE style - %{_name}.
 
 %description -n kde-style-%{_name} -l pl
-TODO
+Styl do KDE - %{_name}.
 
 %package -n kde-colorscheme-%{_name}
 Summary:	Color scheme for KDE style - %{_name}
@@ -60,10 +61,10 @@ Group:		Themes
 Requires:	kdebase-core
 
 %description -n kde-colorscheme-%{_name}
-TODO
+Color scheme for KDE style - %{_name}.
 
 %description -n kde-colorscheme-%{_name} -l pl
-TODO
+Schemat kolorów do stylu KDE - %{_name}.
 
 %package -n kde-decoration-%{_name}
 Summary:	Kwin decoration - %{_name}
@@ -74,10 +75,10 @@ Group:		Themes
 Requires:	kdebase-desktop-libs >= 9:3.2.0
 
 %description -n kde-decoration-%{_name}
-TODO
+Kwin decoration - %{_name}.
 
 %description -n kde-decoration-%{_name} -l pl
-TODO
+Dekoracja kwin - %{_name}.
 
 %package -n kde-icons-%{_name}
 Summary:	KDE icons - %{_name}
@@ -88,11 +89,10 @@ Group:		Themes
 Requires:	kdelibs
 
 %description -n kde-icons-%{_name}
-TODO
+KDE icons - %{_name}.
 
 %description -n kde-icons-%{_name} -l pl
-TODO
-
+Motyw ikon KDE - %{_name}.
 
 %prep
 %if %{with weHaveCheckedIfTheIconsAreDistributable}
