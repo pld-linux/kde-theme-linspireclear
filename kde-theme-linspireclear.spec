@@ -20,7 +20,7 @@ Source0:	http://software.linspire.com/pool-src/los/los-linspireclear-style/los-%
 # Source0-md5:	1e2cc6f0febf17b294d8306ccce8db51
 Source1:	http://software.linspire.com/pool-src/los/los-clear-e-icons/los-clear-e-icons_%{_icons_ver}-%{_common_ver}.linspire0.1.tar.gz
 # NoSource1-md5:	14d2ea49f2ebb47eb9690d69fcc6c7f2
-%if %{without weHaveCheckedIfTheIconsAreDistributable}
+%if !%{with weHaveCheckedIfTheIconsAreDistributable}
 NoSource:	1
 %endif
 BuildRequires:	autoconf
