@@ -10,7 +10,7 @@
 %define		_style_ver	1.11
 %define		_icons_ver	1.7
 Summary:	KDE theme - %{_name}
-Summary(pl):	Motyw KDE - %{_name}
+Summary(pl.UTF-8):   Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	%{_common_ver}
 Release:	0.2
@@ -35,12 +35,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KDE theme - %{_name}.
 
-%description -l pl
+%description -l pl.UTF-8
 Motyw KDE - %{_name}.
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
-Summary(pl):	Styl do KDE - %{_name}
+Summary(pl.UTF-8):   Styl do KDE - %{_name}
 Version:	%{_style_ver}
 License:	LGPL
 Group:		Themes
@@ -49,12 +49,12 @@ Requires:	kdelibs
 %description -n kde-style-%{_name}
 KDE style - %{_name}.
 
-%description -n kde-style-%{_name} -l pl
+%description -n kde-style-%{_name} -l pl.UTF-8
 Styl do KDE - %{_name}.
 
 %package -n kde-colorscheme-%{_name}
 Summary:	Color scheme for KDE style - %{_name}
-Summary(pl):	Schemat kolorów do stylu KDE - %{_name}
+Summary(pl.UTF-8):   Schemat kolorÃ³w do stylu KDE - %{_name}
 Version:	%{_style_ver}
 License:	LGPL
 Group:		Themes
@@ -63,12 +63,12 @@ Requires:	kdebase-core
 %description -n kde-colorscheme-%{_name}
 Color scheme for KDE style - %{_name}.
 
-%description -n kde-colorscheme-%{_name} -l pl
-Schemat kolorów do stylu KDE - %{_name}.
+%description -n kde-colorscheme-%{_name} -l pl.UTF-8
+Schemat kolorÃ³w do stylu KDE - %{_name}.
 
 %package -n kde-decoration-%{_name}
 Summary:	Kwin decoration - %{_name}
-Summary(pl):	Dekoracja kwin - %{_name}
+Summary(pl.UTF-8):   Dekoracja kwin - %{_name}
 Version:	%{_style_ver}
 License:	GPL
 Group:		Themes
@@ -77,12 +77,12 @@ Requires:	kdebase-desktop-libs >= 9:3.2.0
 %description -n kde-decoration-%{_name}
 Kwin decoration - %{_name}.
 
-%description -n kde-decoration-%{_name} -l pl
+%description -n kde-decoration-%{_name} -l pl.UTF-8
 Dekoracja kwin - %{_name}.
 
 %package -n kde-icons-%{_name}
 Summary:	KDE icons - %{_name}
-Summary(pl):	Motyw ikon KDE - %{_name}
+Summary(pl.UTF-8):   Motyw ikon KDE - %{_name}
 Version:	%{_icons_ver}
 License:	Proprietary (See copyright)
 Group:		Themes
@@ -91,7 +91,7 @@ Requires:	kdelibs
 %description -n kde-icons-%{_name}
 KDE icons - %{_name}.
 
-%description -n kde-icons-%{_name} -l pl
+%description -n kde-icons-%{_name} -l pl.UTF-8
 Motyw ikon KDE - %{_name}.
 
 %prep
