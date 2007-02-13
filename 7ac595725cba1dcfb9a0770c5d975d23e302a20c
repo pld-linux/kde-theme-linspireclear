@@ -1,0 +1,2 @@
+- removed obsolete exports, htmldir export moved to make install
+- proper R/BR because the decoration uses kwin III API (introduced in kde 3.2)
